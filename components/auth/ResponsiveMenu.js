@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Box, Button, Stack, Typography } from '@mui/material';
+import { Avatar, Box, Stack, Typography, Button } from '@mui/material';
 import React from 'react';
 import GroupWorkIcon from '@mui/icons-material/GroupWork';
 import MovieIcon from '@mui/icons-material/Movie';
@@ -10,6 +10,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { green, pink } from '@mui/material/colors';
 import Image from 'next/image';
 import Link from 'next/link';
+import FormButton from '../customComponent/FormButton';
 const MenuItems = styled(Button)({
   color: 'rgba(255,255,255,0.8)',
   fontFamily: 'monospace',
@@ -55,23 +56,23 @@ function ResponsiveMenu({ setAuthRenderValue }) {
           <Typography color="#fff">Sf Movies</Typography>
         </Link>
       </Box>
-      {/* <Stack justifyContent="space-around" m={2} gap={2}>
-        <Link to="/">
+      <Stack justifyContent="space-around" m={2} gap={2}>
+        <Link href="/">
           <MenuItems startIcon={<HomeIcon />}>Home</MenuItems>
         </Link>
-        <NavLink to="movies">
+        <Link href="/movies">
           <MenuItems startIcon={<MovieIcon />}>Movies</MenuItems>
-        </NavLink>{' '}
-        <NavLink to="movies">
+        </Link>
+        <Link href="/">
           <MenuItems startIcon={<GroupWorkIcon />}>Shows</MenuItems>
-        </NavLink>{' '}
-        <NavLink to="movies">
+        </Link>
+        <Link href="/">
           <MenuItems startIcon={<LiveTvIcon />}>livie Tv</MenuItems>
-        </NavLink>{' '}
-        <NavLink to="movies">
+        </Link>
+        <Link href="/">
           <MenuItems startIcon={<ShoppingCartIcon />}>My List</MenuItems>
-        </NavLink>
-      </Stack> */}
+        </Link>
+      </Stack>
     </Box>
   );
 }

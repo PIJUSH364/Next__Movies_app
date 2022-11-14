@@ -141,7 +141,7 @@ function NavBar() {
             sx={{
               // backgroundColor: '#696969',
               color: '#FFF',
-              width: { xs: '80vw', sm: '60vw', md: '50vw', lg: '30vw' },
+              width: { xs: '80vw', sm: '60vw', md: '30vw', lg: '30vw' },
               boxSizing: 'border-box',
             }}
           >
