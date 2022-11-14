@@ -1,0 +1,28 @@
+.Custom--button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .button--container {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5em 0.6em;
+    border-radius: 6px;
+  }
+  
+  .Custom--form--button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .button--form--container {
+    color: white;
+    background-color: rgba(39, 51, 210, 0.5);
+    padding: 0.5em 0.6em;
+    border-radius: 6px;
+  }
+  
