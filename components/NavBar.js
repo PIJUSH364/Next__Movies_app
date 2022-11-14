@@ -16,11 +16,11 @@ const bgImg = {
 const MenuItems = styled(Typography)({
   color: 'rgba(255,255,255,0.8)',
   fontFamily: 'monospace',
-  fontSize: '1.4rem',
+  fontSize: '1.1rem',
   fontFamily: 500,
-  padding: '5px 1.4rem',
+  padding: '4px 1.2rem',
   transition: 'all 1.2s ease-in-out',
-  borderRadius: '30px',
+  borderRadius: '15px',
   '&:hover': {
     background: '#fff',
     color: '#000',
@@ -57,10 +57,17 @@ function NavBar() {
 
   return (
     <Stack
+      alignItems="center"
       direction="row"
-      justifyContent="space-between"
       sx={{
         height: { xs: '13vh', sm: '13vh', md: '18vh', lg: '15vh', xl: '20vh' },
+        justifyContent: {
+          xs: 'space-around',
+          sm: 'space-around',
+          md: 'space-around',
+          lg: 'space-between',
+          xl: 'space-between',
+        },
       }}
     >
       <Box>
@@ -71,43 +78,42 @@ function NavBar() {
       <Box
         sx={{
           display: 'grid',
+          alignItems: 'center',
           gridTemplateColumns: {
             xs: 'auto',
             sm: '1fr',
             md: '1.4fr 2fr',
             lg: '1.2fr 2fr',
           },
-          alignItems: 'baseline',
         }}
       >
         <Box>
           <SearchBar placeholder="Find movies..." data={moviesData} />
         </Box>
-        {/* <Stack
-        direction="row"
-        sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' } }}
-        ml={1}
-        gap={1}
-      >
-        <Link to="/">
-          <MenuItems>Home</MenuItems>
-        </Link>
-        <Link to={movieLink}>
-          <MenuItems>Movies</MenuItems>
-        </Link>{' '}
-        <Link to="shows">
-          <MenuItems>Shows</MenuItems>
-        </Link>{' '}
-        <Link to="livetv">
-          <MenuItems>LiveTv</MenuItems>
-        </Link>{' '}
-        <Link to="mylist">
-          <MenuItems>MyList</MenuItems>
-        </Link>
-      </Stack> */}
+        <Stack
+          direction="row"
+          sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex' } }}
+          ml={1}
+          gap={1}
+        >
+          <Link href="/">
+            <MenuItems>Home</MenuItems>
+          </Link>
+          <Link href="/movies">
+            <MenuItems>Movies</MenuItems>
+          </Link>
+          <Link href="/">
+            <MenuItems>Shows</MenuItems>
+          </Link>
+          <Link href="/">
+            <MenuItems>LiveTv</MenuItems>
+          </Link>
+          <Link href="/">
+            <MenuItems>MyList</MenuItems>
+          </Link>
+        </Stack>
       </Box>
       <Box
-        mt={-1.4}
         sx={{
           paddingLeft: { xs: '1rem', sm: '1rem', md: '0', lg: '0' },
           paddingRight: { xs: '1rem', sm: '1rem', md: '0', lg: '0' },
